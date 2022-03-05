@@ -178,8 +178,6 @@ def print_game_board(board: dict) -> None:
 
 
 def get_player_input(player_icon):
-    # loop here to catch errors:
-    # Do I need a while loop here or does the try do the job?
     while True:
         # Input must be a number from 1-9 inclusive:
         try:
