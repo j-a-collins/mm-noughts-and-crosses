@@ -231,7 +231,7 @@ def insert_icon(icon, position):
 
 def ai_input() -> None:
     """Gets the AI's move decision"""
-    high_score = -800
+    high_score = -1000
     best_choice = 0
 
     for key in game_board.keys():
@@ -256,7 +256,7 @@ def minimax_decision(current_game_board, depth, maximiser):
         return 0
 
     if maximiser:
-        high_score = -800
+        high_score = -1000
         for key in current_game_board.keys():
             if current_game_board[key] == " ":
                 current_game_board[key] = ai
@@ -267,7 +267,7 @@ def minimax_decision(current_game_board, depth, maximiser):
         return high_score
 
     else:
-        high_score = 800
+        high_score = 1000
         for key in game_board.keys():
             if game_board[key] == " ":
                 game_board[key] = player
